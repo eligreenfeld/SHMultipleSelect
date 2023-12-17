@@ -205,10 +205,10 @@ const int selectionTopMargin = 30;
                          self.layer.opacity = 0;
                      }
                      completion:^(BOOL finished) {
-                         [self removeFromSuperview];
                          if ([_delegate respondsToSelector:@selector(multipleSelectView:clickedBtnAtIndex:withSelectedIndexPaths:)]) {
                              [_delegate multipleSelectView:self clickedBtnAtIndex:sender.tag withSelectedIndexPaths:_table.indexPathsForSelectedRows];
                          }
+                         [self removeFromSuperview];
                      }];
 }
 
